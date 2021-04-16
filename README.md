@@ -4,4 +4,4 @@
 
 # Creating a Chat App with WebSockets
 
-This repository is the code corresponding to the hands-on lab [Creating a Chat App with WebSockets](https://play.kotlinlang.org/hands-on/Creating%20a%20Chat%20App%20with%20WebSockets/01_Introduction). 
+This repository is the code corresponding to the hands-on lab [Creating a WebSocket Chat](https://ktor.io/docs/creating-web-socket-chat.html). 
