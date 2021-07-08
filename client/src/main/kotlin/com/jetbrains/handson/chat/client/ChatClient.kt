@@ -32,7 +32,6 @@ suspend fun DefaultClientWebSocketSession.inputMessages() {
     }
 }
 
-@KtorExperimentalAPI
 fun main() {
     val client = HttpClient {
         install(WebSockets)
