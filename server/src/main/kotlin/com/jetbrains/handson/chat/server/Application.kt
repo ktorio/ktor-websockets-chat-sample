@@ -15,10 +15,10 @@ fun Application.module() {
     routing {
         val connections = Collections.synchronizedSet<Connection?>(LinkedHashSet())
         webSocket("/chat") {
-            println("Adding user!")
             val thisConnection = Connection(this)
             connections += thisConnection
             try {
+                println("Adding ${thisConnection.name}")
                 send("You are connected! There are ${connections.count()} users here.")
                 for (frame in incoming) {
                     frame as? Frame.Text ?: continue
@@ -31,7 +31,7 @@ fun Application.module() {
             } catch (e: Exception) {
                 println(e.localizedMessage)
             } finally {
-                println("Removing $thisConnection!")
+                println("Removing ${thisConnection.name}!")
                 connections -= thisConnection
             }
         }
